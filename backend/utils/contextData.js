@@ -1,7 +1,7 @@
-const geoip = require("geoip-lite");
+// const geoip = require("geoip-lite");
 const getCurrentContextData = (req) => {
   const ip = req.clientIp || "unknown";
-  const location = geoip.lookup(ip) || "unknown";
+  const location ="unknown";
   const country = location.country ? location.country.toString() : "unknown";
   const city = location.city ? location.city.toString() : "unknown";
   const browser = req.useragent.browser

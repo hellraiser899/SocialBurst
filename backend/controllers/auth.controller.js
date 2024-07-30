@@ -1,7 +1,7 @@
 const UserContext = require("../models/context.model");
 const UserPreference = require("../models/preference.model");
 const SuspiciousLogin = require("../models/suspiciousLogin.model");
-const geoip = require("geoip-lite");
+// const geoip = require("geoip-lite");
 const { saveLogInfo } = require("../middlewares/logger/logInfo");
 const formatCreatedAt = require("../utils/timeConverter");
 
@@ -14,7 +14,7 @@ const types = {
 };
 const getCurrentContextData = (req) => {
   const ip = req.clientIp || "unknown";
-  const location = geoip.lookup(ip) || "unknown";
+  const location = "unknown";
   const country = location.country ? location.country.toString() : "unknown";
   const city = location.city ? location.city.toString() : "unknown";
   const browser = req.useragent.browser
@@ -275,7 +275,7 @@ const addContextData = async (req, res) => {
   const userId = req.userId;
   const email = req.email;
   const ip = req.ip || "unknown";
-  const location = geoip.lookup(ip) || "unknown";
+  const location ="unknown";
   const country = location.country ? location.country.toString() : "unknown";
   const city = location.city ? location.city.toString() : "unknown";
   const browser = req.useragent.browser
