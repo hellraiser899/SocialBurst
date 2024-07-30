@@ -1,0 +1,3 @@
+node: {
+    __dirname: true
+  }
