@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:4000",
+  "proxy": "https://social-burst-4aeq.vercel.app",
   "dependencies": {
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^1.0.6",
