@@ -50,7 +50,7 @@ function fileUpload(req, res, next) {
     }
 
     const file = req.files[0];
-    const fileUrl = `${req.protocol}://${req.get("host")}/assets/userFiles/${
+    const fileUrl = `https://social-burst.vercel.app/assets/userFiles/${
       file.filename
     }`;
 
