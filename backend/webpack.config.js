@@ -1,3 +1,0 @@
-node: {
-    __dirname: true
-  }
