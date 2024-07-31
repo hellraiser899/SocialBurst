@@ -34,6 +34,8 @@ const db = new Database(process.env.MONGODB_URI, {
 db.connect().catch((err) =>
   console.error("Error connecting to database:", err)
 );
+
+app.options('*', cors()) 
 app.use(function (req, res, next) {
   //Enabling CORS
   res.header("Access-Control-Allow-Origin", "*");
