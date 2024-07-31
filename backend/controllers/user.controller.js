@@ -293,7 +293,7 @@ const addUser = async (req, res, next) => {
   const defaultAvatar =
     "https://raw.githubusercontent.com/nz-m/public-files/main/dp.jpg";
   const fileUrl = req.files?.[0]?.filename
-    ? `https://social-burst-4aeq.vercel.app/assets/userAvatars/${
+    ? `${req.protocol}://${req.get("host")}/assets/userAvatars/${
         req.files[0].filename
       }`
     : defaultAvatar;
